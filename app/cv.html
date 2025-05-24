@@ -1,0 +1,53 @@
+<body>
+  <h2>Curriculum Vitae</h2>
+  
+  <div id="lefties">
+    <h3 onclick="toggleOpen('edu')">Education</h3>
+      <div class="cvContent" id="edu">
+        <li>MFA Creative Writing (Fiction), CU 2021</li>
+        <li>BA English Literature and Creative Writing (Fiction), GW 2013</li>
+      </div>
+    
+    <h3 onclick="toggleOpen('teach')">Teaching</h3>
+      <div class="cvContent" id="teach">
+        <li>Intro Creative Writing (Instructor of Record)</li>
+      </div>
+    
+    <h3 onclick="toggleOpen('pubs')">Publications</h3>
+      <div class="cvContent" id="pubs">
+        <li>Story 1</li>
+        <li>Story 2</li>
+      </div>
+  </div>
+</body>
+
+<style>
+  #lefties{
+    text-align: left;
+  }
+  .cvContent{
+    display: none;
+  }
+  h2{
+    font-size: 32;
+    color: crimson;
+  }
+  h3{
+    color: crimson;
+    font-size: 24;
+  }
+  h3:hover{
+    color: black;
+  }
+</style>
+
+<script>
+  function toggleOpen(name){
+    var section = document.getElementById(name);
+    if(section.style.display !== "block"){
+      section.style.display = "block";
+    }else{
+      section.style.display = "none";
+    }
+  }
+</script>
